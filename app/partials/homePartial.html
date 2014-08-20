@@ -1,0 +1,14 @@
+<div class="mainContainer mainContainerDefault">
+  <div class="autoContainer" ng-repeat="auto in autos">
+    <div class="autoImg">
+      <img class="imgMaxWidth" ng-src="{{auto.imgSrc}}" alt="Car">
+    </div>
+    <div class="autoInfo">
+      <div class="autoBrand">
+        <p><span>{{auto.brand}}</span><span class="autoPrice">{{auto.price}}</span></p>
+      </div>
+      <p><span>Model: </span>{{auto.model}}</p>
+      <p><span>Year: </span>{{auto.year}}</p>
+    </div>
+  </div>
+</div>
