@@ -2,27 +2,47 @@
 
 /* Controllers */
 
-var autoExpoControllers = angular.module('autoExpoAppControllers', []);
+var autoExpoControllers = angular.module('autoExpoAppControllers', []),
+	selectCompare = [];
 
-autoExpoControllers.controller('AutoListCtrl', ['$scope', '$http',
-	function($scope, $http) {
+autoExpoControllers.controller('AutoListCtrl', ['$scope', '$http', '$timeout',
+
+	function($scope, $http, $timeout) {
 
 		$http.get('autos/autos.json').success(function(data) {
 			$scope.autos = data;
 		});
 
-		$scope.checkBox = false;
+		$scope.select = [];
+		$scope.showWarning = true;
 
-		$scope.checkCar = function(e) {
-			var elm = e.currentTarget;
-			console.log(elm);
-			console.log($scope.checkBox);
-			// angular.element(elm.parent()).addClass('autoSelect');
-			// angular.element(elm.querySelector('.overlay').removeClass('hidden'));
-			// angular.element(elm.querySelector('.checkIcon').removeClass('hidden'));
+		$scope.selectFunction = function(e, index, _id) {
+			var elm = e.target,
+				found = false,
+				i = 0,
+				n = 0;
+
+			for (i = 0, n = selectCompare.length; i < n; i++) {
+				if (selectCompare[i] === _id) {
+					found = true;
+					$scope.select[index] = false;
+					selectCompare.splice(i, 1);
+				}
+			}
+			if (!found) {
+				if (selectCompare.length < 3) {
+					$scope.select[index] = true;
+					selectCompare.push(_id);
+				} else {
+					$scope.select[index] = false;
+					$scope.showWarning = false;
+					$timeout(function() {
+						$scope.showWarning = true;
+					}, 2000);
+				}
+			}
+			console.log($scope.select);
 		};
-
-		//  $scope.orderProp = 'age';
 	}
 ]);
 
