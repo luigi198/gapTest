@@ -5,7 +5,8 @@
 var autoExpo = angular.module('autoExpoApp', [
 	'ngRoute',
 	'autoExpoAppControllers',
-	'autoExpoAppDirectives'
+	'autoExpoAppDirectives',
+	'autoExpoAppServices'
 ]);
 
 autoExpo.config(['$routeProvider',
@@ -27,7 +28,7 @@ autoExpo.config(['$routeProvider',
 
 		.when('/admin', {
 			templateUrl: 'partials/listAutos.html',
-		controller: 'AdminListCtrl'
+			controller: 'AdminListCtrl'
 		})
 
 		.otherwise('/', {

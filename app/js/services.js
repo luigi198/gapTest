@@ -5,5 +5,11 @@
 
 // Demonstrate how to register services
 // In this case it is a simple value service.
-angular.module('autoExpoApp.services', []).
-value('version', '0.1');
+angular.module('autoExpoAppServices', []).
+service('JSONService', function($http) {
+	return {
+		getJSON: function() {
+			return $http.get('autos/autos.json');
+		}
+	};
+});

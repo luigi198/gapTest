@@ -96,10 +96,11 @@ autoExpoControllers.controller('AutoDetailCtrl', ['$scope', '$http',
 				$window.location.href = '/app/';
 			}
 		});
+
 	}
 ]);
 
-autoExpoControllers.controller('AdminListCtrl', ['$scope', '$http',
+autoExpoControllers.controller('AdminListCtrl', ['$scope', '$http', 'JSONService',
 	function($scope, $http) {
 
 		$scope.order = 'brand';
@@ -107,6 +108,27 @@ autoExpoControllers.controller('AdminListCtrl', ['$scope', '$http',
 		$http.get('autos/autos.json').success(function(data) {
 			$scope.autos = data;
 		});
+
+		$scope.eliminar = function(id) {
+			var i = 0,
+				n = 0,
+				aux;
+
+			/*$http.post('path/to/server/file/to/save/json', $scope.languages).then(function(data) {
+      $scope.msg = 'Data saved';
+    });*/
+
+			for (i = 0, n = $scope.autos.length; i < n; i++) {
+				if ($scope.autos[i].id === id) {
+					aux = $scope.autos;
+					aux.splice(i, 1);
+					$http.post('./autos/autos.json', aux).then(function(data) {
+						$scope.autos.splice(i, 1);
+					});
+				}
+			}
+		};
+
 	}
 ]);
 

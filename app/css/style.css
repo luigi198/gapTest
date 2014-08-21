@@ -356,6 +356,7 @@ th {
   line-height: 1.42857143;
   text-align: left;
   font-weight: bold;
+  cursor: pointer;
 }
 
 td {
@@ -369,4 +370,64 @@ td {
 
 .hidden {
   display: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-delete {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.btn-delete:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
+.btn-create {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  float: right;
+}
+
+.btn-create:hover {
+  color: #fff;
+  background-color: #3071a9;
+  border-color: #285e8e;
+}
+
+.btn-update {
+  font-weight: 400;
+  color: #428bca;
+  cursor: pointer;
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.btnsTable {
+  float: right;
 }

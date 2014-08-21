@@ -1,0 +1,46 @@
+[{
+	"id": "1",
+	"price": "$12.000",
+	"brand": "Hyundai",
+	"model": "Accent",
+	"year": "2006",
+	"color": "red",
+	"imgSrc": "./img/hyundaiAccent.jpg",
+	"deal": true
+}, {
+	"id": "2",
+	"price": "$11.000",
+	"brand": "Mitsubishi",
+	"model": "Evolution",
+	"year": "2001",
+	"color": "blue",
+	"imgSrc": "./img/mitsubishiEvo.jpg",
+	"deal": false
+}, {
+	"id": "3",
+	"price": "$15.000",
+	"brand": "Subaru",
+	"model": "Impreza",
+	"year": "2010",
+	"color": "gray",
+	"imgSrc": "./img/subaruImpreza.jpg",
+	"deal": true
+}, {
+	"id": "4",
+	"price": "$20.000",
+	"brand": "Toyota",
+	"model": "Prado",
+	"year": "2012",
+	"color": "gray",
+	"imgSrc": "./img/toyotaPrado.jpg",
+	"deal": false
+}, {
+	"id": "5",
+	"price": "$25.000",
+	"brand": "Hyundai",
+	"model": "Tucson",
+	"year": "2013",
+	"color": "red",
+	"imgSrc": "./img/hyundaiTucson.jpg",
+	"deal": true
+}]

@@ -1,3 +1,4 @@
+<button class="btn btn-create"><i class="fa fa-plus"></i> Crear</button>
 <table class="table">
   <thead>
     <tr>
@@ -7,6 +8,7 @@
       <th ng-click="order = 'year'">Year</th>
       <th ng-click="order = 'color'">Color</th>
       <th ng-click="order = 'deal'">Deal</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +19,12 @@
       <td>{{auto.year}}</td>
       <td>{{auto.color}}</td>
       <td>{{auto.deal}}</td>
+      <td>
+        <div class="btnsTable">
+          <button type="button" class="btn btn-xs btn-update">Modificar</button>
+          <button type="button" class="btn btn-xs btn-delete" ng-click="eliminar(auto.id)">Eliminar</button>
+        </div>
+      </td>
     </tr>
   </tbody>
 </table>
