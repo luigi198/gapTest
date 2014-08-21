@@ -3,11 +3,13 @@
 /* Directives */
 
 
-angular.module('autoExpoApp.directives', []).
-directive('appVersion', ['version',
-	function(version) {
-		return function(scope, elm, attrs) {
-			elm.text(version);
+angular.module('autoExpoAppDirectives', []).
+directive('selectAuto',
+	function() {
+		return function($scope, elm, attrs) {
+			angular.element(elm.parent()).addClass('autoSelect');
+			angular.element(elm.querySelector('overlay').removeClass('hidden'));
+			angular.element(elm.querySelector('checkIcon').removeClass('hidden'));
 		};
 	}
-]);
+);

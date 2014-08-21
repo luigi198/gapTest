@@ -4,7 +4,8 @@
 // Declare app level module which depends on filters, and services
 var autoExpo = angular.module('autoExpoApp', [
 	'ngRoute',
-	'autoExpoAppControllers'
+	'autoExpoAppControllers',
+	'autoExpoAppDirectives'
 ]);
 
 autoExpo.config(['$routeProvider',

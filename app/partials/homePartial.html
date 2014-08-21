@@ -1,15 +1,20 @@
-<div class="mainContainer mainContainerDefault">
-  <div class="autoContainer" ng-repeat="auto in autos">
-    <div class="autoImg">
-      <img class="imgMaxWidth" ng-src="{{auto.imgSrc}}" alt="Car">
+<div class="containerListAutos containerListAutosDefault">
+  <div class="containerAuto" ng-repeat="auto in autos" ng-click="">
+    <div class="overlay hidden"></div>
+    <div class="checkIcon hidden">
+      <i class="fa fa-check-circle fa-4x"></i>
     </div>
-    <div class="autoInfo">
-      <div class="autoBrand">
+    <div class="autoImgMain">
+      <a href="/app/#/auto/{{auto.id}}"><img class="imgMaxWidth" ng-src="{{auto.imgSrc}}" alt="{{auto.brand}}"></a>
+    </div>
+    <div class="autoInfoMain">
+      <div class="autoBrandMain">
         <p><span class="spanBrand">{{auto.brand}}</span><span class="autoPrice">{{auto.price}}</span></p>
       </div>
       <p><span>Model: </span>{{auto.model}}</p>
       <p><span>Year: </span>{{auto.year}}</p>
       <p><span>Color: </span>{{auto.color}}</p>
+      <a href="/app/#/auto/{{auto.id}}"><button type="button" class="btnInfo">Más Información</button></a>
     </div>
   </div>
 </div>

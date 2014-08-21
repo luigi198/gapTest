@@ -25,4 +25,22 @@
 	"color": "gray",
 	"imgSrc": "./img/subaruImpreza.jpg",
 	"deal": true
+}, {
+	"id": "4",
+	"price": "$20.000",
+	"brand": "Toyota",
+	"model": "Prado",
+	"year": "2012",
+	"color": "gray",
+	"imgSrc": "./img/toyotaPrado.jpg",
+	"deal": false
+}, {
+	"id": "5",
+	"price": "$25.000",
+	"brand": "Hyundai",
+	"model": "Tucson",
+	"year": "2013",
+	"color": "red",
+	"imgSrc": "./img/hyundaiTucson.jpg",
+	"deal": true
 }]
