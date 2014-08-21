@@ -310,6 +310,63 @@ a.homeNavbar:hover {
 
 /*  Widget Compare  */
 
+/*  Compare  */
+
+.containerCompare {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #B22222;
+  background-color: #dedede;
+  overflow: hidden;
+}
+
+.removeCompare {
+  position: relative;
+}
+
+.autoInfoCompare {
+  margin: 0;
+}
+
+.iconRemoveCompare {
+  position: absolute;
+  color: #E60000;
+}
+
+.autoCompareContainer {
+  float: left;
+}
+
+/*  Compare  */
+
+/*  Admin  */
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-color: gray;
+}
+
+th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+  padding: 8px;
+  line-height: 1.42857143;
+  text-align: left;
+  font-weight: bold;
+}
+
+td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+/*  Admin  */
+
 .hidden {
   display: none;
 }

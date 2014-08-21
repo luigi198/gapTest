@@ -1,3 +1,24 @@
-<div>
-  <h1>Hola mundo</h1>
+<div class="containerCompare">
+  <div class="mensajeArrayVacio" ng-show="compareVacio">
+    <p>No hay autos seleccionados actualmente.</p>
+  </div>
+  <div class="autoCompare" ng-repeat="auto in autos">
+    <div class="autoCompareContainer" style="width: {{width}}%">
+      <div class="autoImgMain autoImgCompare">
+        <div class="removeCompare">
+          <i class="fa fa-times-circle fa-2x iconRemoveCompare" ng-click="remove($index)"></i
+        </div>
+        <img class="imgMaxWidth" ng-src="{{auto.imgSrc}}" alt="{{auto.brand}}">
+      </div>
+      <div class="autoInfoMain autoInfoCompare">
+        <div class="autoBrandMain">
+          <p><span class="spanBrand">{{auto.brand}}</span></p>
+        </div>
+        <p><span>Model: </span>{{auto.model}}</p>
+        <p><span>Year: </span>{{auto.year}}</p>
+        <p><span>Color: </span>{{auto.color}}</p>
+        <p><span>Price: </span>{{auto.price}}</p>
+      </div>
+    </div>
+  </div>
 </div>

@@ -25,6 +25,11 @@ autoExpo.config(['$routeProvider',
 			controller: 'AutoDetailCtrl'
 		})
 
+		.when('/admin', {
+			templateUrl: 'partials/listAutos.html',
+		controller: 'AdminListCtrl'
+		})
+
 		.otherwise('/', {
 			templateUrl: 'partials/homePartial.html',
 			controller: 'AutoListCtrl'

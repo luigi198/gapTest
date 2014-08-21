@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th ng-click="order = 'id'">Id</th>
+      <th ng-click="order = 'brand'">Brand</th>
+      <th ng-click="order = 'model'">Model</th>
+      <th ng-click="order = 'year'">Year</th>
+      <th ng-click="order = 'color'">Color</th>
+      <th ng-click="order = 'deal'">Deal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="auto in autos | orderBy: order">
+      <td>{{auto.id}}</td>
+      <td>{{auto.brand}}</td>
+      <td>{{auto.model}}</td>
+      <td>{{auto.year}}</td>
+      <td>{{auto.color}}</td>
+      <td>{{auto.deal}}</td>
+    </tr>
+  </tbody>
+</table>
