@@ -1,5 +1,5 @@
 [{
-	"id": 1,
+	"id": "1",
 	"price": "$12.000",
 	"brand": "Hyundai",
 	"model": "Accent",
@@ -8,7 +8,7 @@
 	"imgSrc": "./img/hyundaiAccent.jpg",
 	"deal": true
 }, {
-	"id": 2,
+	"id": "2",
 	"price": "$11.000",
 	"brand": "Mitsubishi",
 	"model": "Evolution",
@@ -17,7 +17,7 @@
 	"imgSrc": "./img/mitsubishiEvo.jpg",
 	"deal": false
 }, {
-	"id": 3,
+	"id": "3",
 	"price": "$15.000",
 	"brand": "Subaru",
 	"model": "Impreza",

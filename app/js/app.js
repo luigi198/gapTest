@@ -17,6 +17,11 @@ autoExpo.config(['$routeProvider',
 		.when('/auto/:id', {
 			templateUrl: 'partials/autoDetail.html',
 			controller: 'AutoDetailCtrl'
+		})
+
+		.otherwise('/', {
+			templateUrl: 'partials/homePartial.html',
+			controller: 'AutoListCtrl'
 		});
 	}
 ]);

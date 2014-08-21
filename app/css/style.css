@@ -39,27 +39,30 @@ a {
 }
 
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: #B22222;
+  border-color: #000000;
 }
 
 .brandNavbar {
   margin-right: 0;
   margin-left: 0;
   float: left;
-  height: 50px;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
-  color: #777;
+  cursor: pointer;
+}
+
+.brandNavbar:hover {
+  background-color: #8B0000;
 }
 
 a.homeNavbar {
-  color: #777;
+  color: #FFFFFF;
 }
 
 a.homeNavbar:hover {
-  text-shadow: 0px 0px 1px #777;
+  text-shadow: 0px 0px 1px #000000;
 }
 
 /*   Header   */
@@ -88,6 +91,7 @@ a.homeNavbar:hover {
   border: 1px solid;
   margin: 2% 5%;
   overflow: hidden;
+  background-color: #FFFFFF;
 }
 
 .autoImg {
@@ -113,6 +117,11 @@ a.homeNavbar:hover {
 .autoPrice {
   float: right;
   margin-right: 10%;
+  color: #416DB5;
+}
+
+.spanBrand {
+  font-weight: bold;
 }
 
 .imgMaxWidth {
