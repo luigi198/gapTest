@@ -75,3 +75,9 @@ autoExpoControllers.controller('AutoDetailCtrl', ['$scope', '$http',
 		});
 	}
 ]);
+
+autoExpoControllers.controller('AutoCompareCtrl', ['$scope', '$http',
+	function($scope, $http) {
+		console.log('compare');
+	}
+]);

@@ -15,6 +15,11 @@ autoExpo.config(['$routeProvider',
 			controller: 'AutoListCtrl'
 		})
 
+		.when('/auto/compare', {
+			templateUrl: 'partials/autoCompare.html',
+			controller: 'AutoCompareCtrl'
+		})
+
 		.when('/auto/:id', {
 			templateUrl: 'partials/autoDetail.html',
 			controller: 'AutoDetailCtrl'

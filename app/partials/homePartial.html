@@ -1,27 +1,32 @@
-<input type="text" placeholder="Search..." class="inputSearch" ng-model="search.brand">
-<div class="containerListAutos containerListAutosDefault">
-  <div class="containerAuto" ng-repeat="auto in autos | filter:search" ng-click="">
-    <div class="autoImgMain">
-      <a href="/app/#/auto/{{auto.id}}"><img class="imgMaxWidth" ng-src="{{auto.imgSrc}}" alt="{{auto.brand}}"></a>
-    </div>
-    <div class="autoInfoMain">
-      <div class="autoBrandMain">
-        <p><span class="spanBrand">{{auto.brand}}</span><span class="autoPrice">{{auto.price}}</span></p>
+<div class="mainContainer">
+  <div class="containerSearch">
+    <input type="text" placeholder="Search..." class="inputSearch" ng-model="search.brand">
+    <i class="fa fa-search searchIcon"></i>
+  </div>
+  <div class="containerListAutos containerListAutosDefault">
+    <div class="containerAuto" ng-repeat="auto in autos | filter:search" ng-click="">
+      <div class="autoImgMain">
+        <a href="/app/#/auto/{{auto.id}}"><img class="imgMaxWidth" ng-src="{{auto.imgSrc}}" alt="{{auto.brand}}"></a>
       </div>
-      <p><span>Model: </span>{{auto.model}}</p>
-      <p><span>Year: </span>{{auto.year}}</p>
-      <p><span>Color: </span>{{auto.color}}</p>
-      <a href="/app/#/auto/{{auto.id}}"><button type="button" class="btnInfo">Más Información</button></a>
-    </div>
-    <div class="checkboxContainer">
-      <input type="checkbox" ng-click="selectFunction($event, $index, auto.id)">
-    </div>
-    <div class="overlay" ng-show="select[$index]"></div>
-    <div class="checkIcon" ng-show="select[$index]">
-      <i class="fa fa-check-circle fa-4x"></i>
+      <div class="autoInfoMain">
+        <div class="autoBrandMain">
+          <p><span class="spanBrand">{{auto.brand}}</span><span class="autoPrice">{{auto.price}}</span></p>
+        </div>
+        <p><span>Model: </span>{{auto.model}}</p>
+        <p><span>Year: </span>{{auto.year}}</p>
+        <p><span>Color: </span>{{auto.color}}</p>
+        <a href="/app/#/auto/{{auto.id}}"><button type="button" class="btnInfo">Más Información</button></a>
+      </div>
+      <div class="checkboxContainer">
+        <input type="checkbox" ng-click="selectFunction($event, $index, auto.id)">
+      </div>
+      <div class="overlay" ng-show="select[$index]"></div>
+      <div class="checkIcon" ng-show="select[$index]">
+        <i class="fa fa-check-circle fa-4x"></i>
+      </div>
     </div>
   </div>
-</div>
-<div class="warningSelect" ng-hide="showWarning" ng-animate="{show:'animate-show', hide:'animate-hide'}">
-  No se pueden elegir más de 3 opciones
+  <div class="warningSelect" ng-hide="showWarning" ng-animate="{show:'animate-show', hide:'animate-hide'}">
+    No se pueden elegir más de 3 opciones
+  </div>
 </div>

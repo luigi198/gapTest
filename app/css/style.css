@@ -75,6 +75,16 @@ a.homeNavbar:hover {
   position: relative;
 }
 
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #B22222;
+  background-color: #dedede;
+  overflow: hidden;
+}
+
 .containerListAutos {
   padding-top: 20px;
 }
@@ -88,6 +98,7 @@ a.homeNavbar:hover {
   height: 330px;
   overflow: hidden;
   position: relative;
+  background-color: #FFFFFF;
 }
 
 .checkboxContainer {
@@ -170,7 +181,22 @@ a.homeNavbar:hover {
 }
 
 .inputSearch:focus {
-  outline-color: #FFFFFF;
+  z-index: 10;
+}
+
+.inputSearch:focus {
+  outline-color: #dedede;
+}
+
+.containerSearch {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 5%;
+  top: 5px;
+  z-index: 5;
 }
 
 .animate-show, .animate-hide {
@@ -206,10 +232,9 @@ a.homeNavbar:hover {
 
 /*  Detail  */
 
-.mainContainer {
-  overflow: hidden;
-  border: 1px solid transparent;
-  border-radius: 4px;
+.imgDetailMaxWidth {
+  max-width: 100%;
+  max-height: 200px;
 }
 
 .mainContainerDefault {
@@ -228,7 +253,7 @@ a.homeNavbar:hover {
 }
 
 .autoImg {
-  width: 20%;
+  width: 30%;
   float: left;
   padding-top: 2%;
   padding-bottom: 2%;
@@ -237,7 +262,7 @@ a.homeNavbar:hover {
 
 .autoInfo {
   float: left;
-  width: 70%;
+  width: 60%;
   padding-left: 5%;
   padding-top: 2%;
   padding-bottom: 2%;
@@ -277,6 +302,10 @@ a.homeNavbar:hover {
 .widgetCompare:hover {
   background-color: #006400;
   box-shadow: 0px 0px 7px #003c00;
+}
+
+.compareAnchor {
+  color: #FFFFFF;
 }
 
 /*  Widget Compare  */
